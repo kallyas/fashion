@@ -1,10 +1,10 @@
-import React from 'react';
-import {StyleSheet, Image} from 'react-native';
-import {ThemedView} from 'src/components';
-import Empty from './Empty';
-import {margin} from 'src/components/config/spacing';
+import React from "react";
+import { StyleSheet, Image } from "react-native";
+import { ThemedView } from "src/components";
+import Empty from "./Empty";
+import { margin } from "../components/config/spacing";
 
-const Unconnected = ({clickTry}) => {
+const Unconnected = ({ clickTry }) => {
   return (
     <ThemedView isFullView>
       <Empty
@@ -13,7 +13,7 @@ const Unconnected = ({clickTry}) => {
         avatarElement={
           <ThemedView colorSecondary style={styles.avatar}>
             <Image
-              source={require('src/assets/images/unconnected.png')}
+              source={require("../assets/images/unconnected.png")}
               resizeMode="stretch"
             />
           </ThemedView>
@@ -21,7 +21,7 @@ const Unconnected = ({clickTry}) => {
         titleButton="Try again"
         clickButton={clickTry ? clickTry : () => {}}
         buttonProps={{
-          type: 'solid',
+          type: "solid",
         }}
       />
     </ThemedView>
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     width: 95,
     height: 95,
     borderRadius: 47.5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginBottom: margin.big + 4,
   },
 });

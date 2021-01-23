@@ -4,22 +4,22 @@ import React, { Component } from "react";
 import OneSignal from "react-native-onesignal";
 import { NavigationContainer } from "@react-navigation/native";
 
-import { APP_ID } from "src/src/config/onesignal";
-import "src/src/config-i18n";
+import { APP_ID } from "./src/config/onesignal";
+import "./src/config-i18n";
 
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import AppRouter from "src/AppRouter";
+import AppRouter from "./src/AppRouter";
 
 import NavigationService from "src/utils/navigation";
 
-import configureStore from "src/config-store";
-import { getDemoSelector } from "src/modules/common/selectors";
-import { tokenSelector } from "src/modules/auth/selectors";
-import demoConfig from "src/utils/demo";
-import globalConfig from "src/utils/global";
+import configureStore from "./src/config-store";
+import { getDemoSelector } from "./src/modules/common/selectors";
+import { tokenSelector } from "./src/modules/auth/selectors";
+import demoConfig from "./src/utils/demo";
+import globalConfig from "./src/utils/global";
 
 const { store, persistor } = configureStore();
 
